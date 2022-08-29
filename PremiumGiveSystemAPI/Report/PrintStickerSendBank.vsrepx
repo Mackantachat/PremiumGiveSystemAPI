@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.1.5.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="PrintStickerSendBank" Margins="0, 0, 0, 2" PageWidth="850" PageHeight="1100" Version="21.1" DataSource="#Ref-0">
+  <Extensions>
+    <Item1 Ref="2" Key="VSReportExtInfo" Value=".vsrepx" />
+  </Extensions>
+  <Bands>
+    <Item1 Ref="3" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="0" />
+    <Item2 Ref="4" ControlType="DetailBand" Name="detailBand1" HeightF="201.041672" KeepTogether="true" Font="Cordia New, 12pt">
+      <MultiColumn Ref="5" ColumnCount="2" Mode="UseColumnCount" />
+      <Controls>
+        <Item1 Ref="6" ControlType="XRLabel" Name="label4" Multiline="true" Text="เรียน ผู้จัดการธนาคารกรุงเทพ" SizeF="239.583344,23" LocationFloat="25,10" Padding="2,2,0,0,100" />
+        <Item2 Ref="7" ControlType="XRLabel" Name="label5" Multiline="true" SizeF="357.291656,23" LocationFloat="50,33.0000153" Font="Cordia New, 12pt, style=Bold, Underline" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="8" EventName="BeforePrint" PropertyName="Text" Expression="[BBL_NAME] + '( ' + [BBL_CODE] + ' )'" />
+          </ExpressionBindings>
+          <StylePriority Ref="9" UseFont="false" />
+        </Item2>
+        <Item3 Ref="10" ControlType="XRLabel" Name="label6" Multiline="true" SizeF="357.291656,30.2916565" LocationFloat="50,56.00003" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="11" EventName="BeforePrint" PropertyName="Text" Expression="Iif([DeliAdr] ==  'B',[BANK_ADDRESS] , [DeliAdr] ==  'BLA' ,[BlaAdr] ,'')" />
+          </ExpressionBindings>
+        </Item3>
+        <Item4 Ref="12" ControlType="XRLine" Name="line1" SizeF="382.291656,11.5416565" LocationFloat="25,86.29169" />
+        <Item5 Ref="13" ControlType="XRLabel" Name="label3" Multiline="true" SizeF="329.166656,23" LocationFloat="78.125,155.541672" Font="Cordia New, 12pt, style=Bold" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="14" EventName="BeforePrint" PropertyName="Text" Expression="Iif([NeedAddress],[CUS_ADDRESS] , '')" />
+          </ExpressionBindings>
+          <StylePriority Ref="15" UseFont="false" />
+        </Item5>
+        <Item6 Ref="16" ControlType="XRLabel" Name="label2" Multiline="true" SizeF="382.291656,23" LocationFloat="25,132.541656" Font="Cordia New, 12pt, style=Bold" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="17" EventName="BeforePrint" PropertyName="Text" Expression="'ชื่อลูกค้า  :  ' + [NAME] + '  ' +[SURNAME]" />
+          </ExpressionBindings>
+          <StylePriority Ref="18" UseFont="false" />
+        </Item6>
+        <Item7 Ref="19" ControlType="XRLabel" Name="label1" Multiline="true" SizeF="382.291656,23.0000038" LocationFloat="25,109.541672" Font="Cordia New, 12pt, style=Bold" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="20" EventName="BeforePrint" PropertyName="Text" Expression="'สมนาคุณ  :  ' + [PROMOTION_NAME]" />
+          </ExpressionBindings>
+          <StylePriority Ref="21" UseFont="false" />
+        </Item7>
+      </Controls>
+      <StylePriority Ref="22" UseFont="false" />
+    </Item2>
+    <Item3 Ref="23" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="2.04168963" />
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v21.1" Name="objectDataSource1" Base64="PE9iamVjdERhdGFTb3VyY2UgTmFtZT0ib2JqZWN0RGF0YVNvdXJjZTEiIC8+" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

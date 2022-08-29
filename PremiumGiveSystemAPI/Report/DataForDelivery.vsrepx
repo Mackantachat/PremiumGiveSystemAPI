@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.1.5.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="DataForDelivery" Margins="0, 0, 0, 1" PageWidth="850" PageHeight="1100" Version="21.1" DataSource="#Ref-0">
+  <Extensions>
+    <Item1 Ref="2" Key="VSReportExtInfo" Value=".vsrepx" />
+  </Extensions>
+  <Bands>
+    <Item1 Ref="3" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="0" />
+    <Item2 Ref="4" ControlType="DetailBand" Name="detailBand1" HeightF="25" KeepTogether="true" Font="Cordia New, 14pt">
+      <Controls>
+        <Item1 Ref="5" ControlType="XRTable" Name="table1" SizeF="752.0833,25" LocationFloat="50,0" Padding="2,2,0,0,96" Borders="Left, Right, Bottom">
+          <Rows>
+            <Item1 Ref="6" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+              <Cells>
+                <Item1 Ref="7" ControlType="XRTableCell" Name="tableCell1" Weight="0.42659290400452576" Multiline="true" TextAlignment="TopCenter">
+                  <ExpressionBindings>
+                    <Item1 Ref="8" EventName="BeforePrint" PropertyName="Text" Expression="[DataSource.CurrentRowIndex] + 1" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="9" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="10" ControlType="XRTableCell" Name="tableCell2" Weight="1.6149581813473366" Multiline="true">
+                  <ExpressionBindings>
+                    <Item1 Ref="11" EventName="BeforePrint" PropertyName="Text" Expression="[BBL_NAME] + '( ' + [BBL_CODE] + ' ) '" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="12" ControlType="XRTableCell" Name="tableCell3" Weight="0.95844897551422314" Multiline="true">
+                  <ExpressionBindings>
+                    <Item1 Ref="13" EventName="BeforePrint" PropertyName="Text" Expression="[BANK_PROVINCE]" />
+                  </ExpressionBindings>
+                </Item3>
+                <Item4 Ref="14" ControlType="XRTableCell" Name="tableCell4" Weight="2.2132966346005194" Multiline="true">
+                  <ExpressionBindings>
+                    <Item1 Ref="15" EventName="BeforePrint" PropertyName="Text" Expression="[PRODUCT_NAME]" />
+                  </ExpressionBindings>
+                </Item4>
+                <Item5 Ref="16" ControlType="XRTableCell" Name="tableCell5" Weight="0.78670330453339532" Multiline="true" TextAlignment="TopRight">
+                  <ExpressionBindings>
+                    <Item1 Ref="17" EventName="BeforePrint" PropertyName="Text" Expression="[NumberOfProduct]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="18" UseTextAlignment="false" />
+                </Item5>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="19" UseBorders="false" />
+        </Item1>
+      </Controls>
+      <StylePriority Ref="20" UseFont="false" />
+    </Item2>
+    <Item3 Ref="21" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="1.37500763" />
+    <Item4 Ref="22" ControlType="GroupHeaderBand" Name="GroupHeader1" RepeatEveryPage="true" HeightF="76.74999" KeepTogether="true" Font="Cordia New, 14pt">
+      <GroupFields>
+        <Item1 Ref="23" FieldName="BANK_PROVINCE_GROUP" />
+      </GroupFields>
+      <Controls>
+        <Item1 Ref="24" ControlType="XRLabel" Name="label3" Multiline="true" Text="label3" SizeF="517.013855,23.0000019" LocationFloat="50,28.7499752" Font="Cordia New, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="25" EventName="BeforePrint" PropertyName="Text" Expression="[BANK_PROVINCE] + '     ชื่อสินค้า  ' + [PRODUCT_NAME]" />
+          </ExpressionBindings>
+          <StylePriority Ref="26" UseFont="false" />
+        </Item1>
+        <Item2 Ref="27" ControlType="XRTable" Name="table2" SizeF="752.0833,25" LocationFloat="50,51.7499924" BackColor="LightGray" Padding="2,2,0,0,96" Borders="All">
+          <Rows>
+            <Item1 Ref="28" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+              <Cells>
+                <Item1 Ref="29" ControlType="XRTableCell" Name="tableCell19" Weight="0.42659290400452576" Multiline="true" Text="ลำดับที่" TextAlignment="TopCenter">
+                  <StylePriority Ref="30" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="31" ControlType="XRTableCell" Name="tableCell20" Weight="1.6149581813473366" Multiline="true" Text="รายชื่อสาขา" TextAlignment="TopCenter">
+                  <StylePriority Ref="32" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="33" ControlType="XRTableCell" Name="tableCell21" Weight="0.95844897551422314" Multiline="true" Text="จังหวัด" TextAlignment="TopCenter">
+                  <StylePriority Ref="34" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="35" ControlType="XRTableCell" Name="tableCell22" Weight="2.2132966346005194" Multiline="true" Text="ประเภทสินค้า" TextAlignment="TopCenter">
+                  <StylePriority Ref="36" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="37" ControlType="XRTableCell" Name="tableCell23" Weight="0.78670330453339532" Multiline="true" Text="จำนวน" TextAlignment="TopCenter">
+                  <StylePriority Ref="38" UseTextAlignment="false" />
+                </Item5>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="39" UseBackColor="false" UseBorders="false" />
+        </Item2>
+      </Controls>
+      <StylePriority Ref="40" UseFont="false" />
+    </Item4>
+    <Item5 Ref="41" ControlType="GroupFooterBand" Name="GroupFooter1" RepeatEveryPage="true" HeightF="25" KeepTogether="true" Font="Cordia New, 14pt">
+      <Controls>
+        <Item1 Ref="42" ControlType="XRTable" Name="table3" SizeF="752.0833,25" LocationFloat="50,0" Padding="2,2,0,0,96" Borders="Left, Right, Bottom">
+          <Rows>
+            <Item1 Ref="43" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+              <Cells>
+                <Item1 Ref="44" ControlType="XRTableCell" Name="tableCell7" Weight="3.0997231566969776" Multiline="true" />
+                <Item2 Ref="45" ControlType="XRTableCell" Name="tableCell8" Weight="0.37580766252076658" Multiline="true" Text="รวม" TextAlignment="TopRight">
+                  <StylePriority Ref="46" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="47" ControlType="XRTableCell" Name="tableCell9" Weight="0.52446918078225579" Multiline="true" TextAlignment="TopRight">
+                  <Summary Ref="48" Running="Group" />
+                  <ExpressionBindings>
+                    <Item1 Ref="49" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([NumberOfProduct])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="50" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="51" UseBorders="false" />
+        </Item1>
+      </Controls>
+      <StylePriority Ref="52" UseFont="false" />
+    </Item5>
+    <Item6 Ref="53" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="72.9166641" Font="Cordia New, 14pt">
+      <Controls>
+        <Item1 Ref="54" ControlType="XRLabel" Name="label2" Multiline="true" TextAlignment="TopCenter" SizeF="752.0833,23.0000038" LocationFloat="50,20.833334" Font="Cordia New, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="55" EventName="BeforePrint" PropertyName="Text" Expression="'ชื่อโปรโมชัน' + [PROMOTION_NAME] + ' Install Date วันที่' + [START_INSTALL_DT] + ' - ' + [END_INSTALL_DT] + ' (วันที่จัดสร้าง ' +  [CREATED_DT]  +  ')'" />
+          </ExpressionBindings>
+          <StylePriority Ref="56" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+      <StylePriority Ref="57" UseFont="false" />
+    </Item6>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v21.1" Name="objectDataSource1" Base64="PE9iamVjdERhdGFTb3VyY2UgTmFtZT0ib2JqZWN0RGF0YVNvdXJjZTEiIC8+" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

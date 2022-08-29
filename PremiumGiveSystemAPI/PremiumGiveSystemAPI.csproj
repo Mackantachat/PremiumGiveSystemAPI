@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Report\DataForDelivery.vsrepx" />
+    <None Remove="Report\ListofAwardessReport.vsrepx" />
+    <None Remove="Report\PrintDetailOfPremium.vsrepx" />
+    <None Remove="Report\PrintStickerSendBank.vsrepx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Report\DataForDelivery.vsrepx" />
+    <EmbeddedResource Include="Report\ListofAwardessReport.vsrepx" />
+    <EmbeddedResource Include="Report\PrintDetailOfPremium.vsrepx" />
+    <EmbeddedResource Include="Report\PrintStickerSendBank.vsrepx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Reporting.Core" Version="21.1.5" />
+    <PackageReference Include="RestSharp" Version="107.3.1-alpha.0.26" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PremiumGiveSystem.BusinessLogic\PremiumGiveSystem.BusinessLogic.csproj" />
+    <ProjectReference Include="..\PremiumGiveSystem.DataContact\PremiumGiveSystem.DataContact.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Report\DataForDelivery.cs">
+      <DependentUpon>DataForDelivery.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\DataForDelivery.Designer.cs">
+      <DependentUpon>DataForDelivery.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\ListofAwardessReport.cs">
+      <DependentUpon>ListofAwardessReport.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\ListofAwardessReport.Designer.cs">
+      <DependentUpon>ListofAwardessReport.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PrintDetailOfPremium.cs">
+      <DependentUpon>PrintDetailOfPremium.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PrintDetailOfPremium.Designer.cs">
+      <DependentUpon>PrintDetailOfPremium.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PrintStickerSendBank.cs">
+      <DependentUpon>PrintStickerSendBank.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\PrintStickerSendBank.Designer.cs">
+      <DependentUpon>PrintStickerSendBank.vsrepx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
